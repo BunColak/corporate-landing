@@ -1,0 +1,16 @@
+{
+  "name": "company-landing",
+  "author": {
+    "email": "bunyamincolak@gmail.com",
+    "name": "Bün Colak"
+  },
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
