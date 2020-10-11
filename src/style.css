@@ -43,6 +43,10 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 h4,
 p {
   font-weight: var(--font-weight-normal);
@@ -182,12 +186,19 @@ header nav > a > img {
   opacity: 0.6;
 }
 
+.services {
+  padding: var(--spacing-extra-loose) 0;
+}
+
 .service {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 var(--spacing-extra-loose);
   margin-top: calc(2 * var(--spacing-extra-loose));
+}
+
+.service:first-of-type {
+  margin-top: 0;
 }
 
 .service:nth-child(even) .service__info {
@@ -223,8 +234,72 @@ header nav > a > img {
   width: 100%;
 }
 
+.about {
+  background: #8699fd42;
+  padding: var(--spacing-extra-loose) 0;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1 1 50%;
+}
+
+.about__item:first-of-type {
+  margin-right: var(--spacing-loose);
+}
+
+.about figure {
+  height: 700px;
+  margin: 0;
+  margin-top: var(--spacing-normal);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion {
+  margin-top: var(--spacing-normal);
+}
+
+.accordion__item {
+  margin-top: var(--spacing-tight);
+}
+
+.accordion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-light);
+  padding: var(--spacing-extra-tight) var(--spacing-normal);
+  border-radius: 25px;
+  box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.025);
+  cursor: pointer;
+}
+
+.accordion__title h4 {
+  font-weight: var(--font-weight-strong);
+  margin: 0;
+}
+
+.accordion__title i {
+  transition: 200ms;
+}
+
+.accordion__title i.open {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  display: none;
+  background-color: var(--color-light);
+  border-radius: 25px;
+  padding: var(--spacing-extra-tight) var(--spacing-normal);
+  margin-top: var(--spacing-tight);
+}
+
 .reviews {
-  background: #e6e8e8;
+  background: #8699fd12;
   padding: var(--spacing-tight) 0;
 }
 
@@ -301,7 +376,6 @@ header nav > a > img {
   }
 
   .service {
-    margin: 0 var(--spacing-loose);
     margin-top: var(--spacing-extra-loose);
     flex-direction: column;
   }
@@ -314,6 +388,19 @@ header nav > a > img {
 
   .service__image {
     order: 1;
+  }
+
+  .about > div {
+    flex-wrap: wrap;
+  }
+
+  .about__item {
+    flex: 1 1 100%;
+    margin-right: 0 !important;
+  } 
+
+  .about__item figure {
+    height: 300px;
   }
 
   .testimony {
