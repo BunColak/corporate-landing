@@ -5,7 +5,8 @@
     "name": "Bün Colak"
   },
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "version": "1.0.0",
   "main": "src/index.js",
